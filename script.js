@@ -33,6 +33,13 @@ function validateForm() {
         password2El.style.borderColor = 'red';
         return;
     }
+    // If form is valid and passwords match
+    if (isValid && passwordsMatch) {
+        // Style main message for success
+        message.textContent = 'Successfully Registered!';
+        message.style.color = 'green';
+        messageContainer.style.borderColor = 'green';
+    }
 }
 
 function processFormData(e) {
