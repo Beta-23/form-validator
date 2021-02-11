@@ -17,6 +17,16 @@ function validateForm() {
         messageContainer.style.borderColor = 'red';
         return;
     }
+    // Check to see if both password fields match
+    if (password1El.value === password2El.value) {
+        // If they match
+        passwordsMatch = true;
+        
+    } else {
+        // If they don't match
+        passwordsMatch = false;
+        return;
+    }
 }
 
 function processFormData(e) {
